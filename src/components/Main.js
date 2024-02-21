@@ -1,5 +1,11 @@
+import Hero from "./Hero";
+import Specials from "./Specials";
+
 export default function Main() {
     return (
-        <main></main>
+        <main>
+            <Hero/>
+            <Specials/>
+        </main>
     )
 }

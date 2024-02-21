@@ -1,13 +1,14 @@
-export default function Nav() {
+export default function Nav(props) {
+
     return (
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Menu</li>
-                <li>Reservation</li>
-                <li>Order Online</li>
-                <li>Login</li>
+            <ul id="primaryNav" className={props.activo ? 'open' : ''}>
+                <li><a href={""}>Home</a></li>
+                <li><a href={""}>About</a></li>
+                <li><a href={""}>Menu</a></li>
+                <li><a href={""}>Reservation</a></li>
+                <li><a href={""}>Order Online</a></li>
+                <li><a href={""}>Login</a></li>
             </ul>
         </nav>
     )
