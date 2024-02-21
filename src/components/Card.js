@@ -16,9 +16,9 @@ export default function Card(props) {
                 <span className="highlight-font">$ {props.price}</span>
             </div>
             <p>{props.description}</p>
-            
-                <h3>Order a Delivery <Icon {...data}/></h3>
-            
+        
+            <h3>Order a Delivery <Icon {...data}/></h3>
+        
         </article>
     )
 }

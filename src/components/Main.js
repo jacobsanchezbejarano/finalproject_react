@@ -9,8 +9,8 @@ import {Routes, Route} from 'react-router-dom';
 export default function Main() {
     return (
         <main>
-            <Routes> 
-                <Route exact path="/" element={<Home/>}/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/menu" element={<Menu/>}/>
                 <Route path="/reservations" element={<Reservations/>}/>
