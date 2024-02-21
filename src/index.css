@@ -234,6 +234,8 @@ footer ul {
   display: flex;
   flex-direction: column;
   position: relative;
+  min-width: 250px;
+  margin: 5px;
 }
 
 .specials-header {
@@ -248,13 +250,11 @@ footer ul {
 }
 
 .specials-card > h3 {
-  position: absolute;
-  left: 5px;
   bottom: 5px;
-  width: 85%;
   display: flex;
-  flex-direction: row;
+  width: 50%;
   justify-content: space-around;
+  padding: 10px;
 }
 
 .delivery-icon img {
@@ -267,11 +267,20 @@ footer ul {
   align-self: center;
 }
 
+article > p {
+  margin-bottom: 70px!important;
+}
+
 
 
 
 
 @media (min-width: 37.5em) {
+
+  .specials-card > h3 {
+    position: absolute;
+    width: 85%;
+  }
 
 	main {
 		display: grid;
@@ -356,8 +365,9 @@ footer ul {
 
   .specials-cards {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 20px
   }
 
   .specials-card {
