@@ -157,8 +157,8 @@ export default function BookingForm(props) {
                         height={250}
                         />
                     </FormControl>
-                    <Button type="Make Your reservation" className="btn btn-primary" width="full">
-                        Submit
+                    <Button className="btn btn-primary" width="full">
+                        Make Your reservation
                     </Button>
                 </form>
                 </Box>
