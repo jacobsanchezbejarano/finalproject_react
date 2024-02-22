@@ -48,11 +48,11 @@ export default function BookingForm(props) {
             if(response != null) {
                 onOpen(response.type, response.message);
                 if(response.type === 'success') {
-                formik.resetForm();
+                    formik.resetForm();
                 }
             }
         }
-      }, [isLoading]);
+      }, [isLoading, response]);
     
       return (
         <VStack w="1024px" p={32} alignItems="flex-start">
@@ -157,7 +157,7 @@ export default function BookingForm(props) {
                         height={250}
                         />
                     </FormControl>
-                    <Button className="btn btn-primary" width="full">
+                    <Button type="submit" className="btn btn-primary" width="full">
                         Make Your reservation
                     </Button>
                 </form>

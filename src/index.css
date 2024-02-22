@@ -20,7 +20,7 @@ code {
 
 body {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto!important;
 }
 
 h1 {
@@ -271,7 +271,10 @@ article > p {
   margin-bottom: 70px!important;
 }
 
-
+.selected {
+  background-color: #495E57;
+  color: #F4CE14;
+}
 
 
 

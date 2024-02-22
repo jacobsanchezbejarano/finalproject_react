@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 export default function Footer() {
     const image = require("../assets/Logo.svg").default;
     const alt_val = "Little Lemon Logo";
@@ -10,12 +12,12 @@ export default function Footer() {
             <div>
                 <p>Navigation</p>
                 <ul>
-                    <li><a href={""}>Home</a></li>
-                    <li><a href={""}>About</a></li>
-                    <li><a href={""}>Menu</a></li>
-                    <li><a href={""}>Reservation</a></li>
-                    <li><a href={""}>Order Online</a></li>
-                    <li><a href={""}>Login</a></li>
+                    <li><Link to="/" className="nav-item">Home</Link></li>
+                    <li><Link to="/about" className="nav-item">About</Link></li>
+                    <li><Link to="/menu" className="nav-item">Menu</Link></li>
+                    <li><Link to="/reservations" className="nav-item">Reservations</Link></li>
+                    <li><Link to="/order" className="nav-item">Order Online</Link></li>
+                    <li><Link to="/login" className="nav-item">Login</Link></li>
                 </ul>
             </div>
 
@@ -31,9 +33,9 @@ export default function Footer() {
             <div>
                 <p>Social Media Links</p>
                 <ul>
-                    <li><a href={""}>Media 1</a></li>
-                    <li><a href={""}>Media 2</a></li>
-                    <li><a href={""}>Media 3</a></li>
+                    <li><Link to="/" className="nav-item">Media 1</Link></li>
+                    <li><Link to="/" className="nav-item">Media 2</Link></li>
+                    <li><Link to="/" className="nav-item">Media 3</Link></li>
                 </ul>
             </div>
         </footer>
