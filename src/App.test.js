@@ -70,13 +70,12 @@ test("Returns an empty array for an unknown date", () => {
   // Assert
   expect(newState).toEqual([]);
 });
-
 describe('Tests for local storage', () => {
   beforeEach(() => {
     localStorage.clear();
   });
 
-  it('should save a reservation to localStorage', () => {
+  test('should save a reservation to localStorage', () => {
     const reservationData = {
       date: '2024-02-22',
       time: '18:00',
@@ -93,7 +92,7 @@ describe('Tests for local storage', () => {
     expect(storedReservations).toEqual([reservationData]);
   });
 
-  it('should add multiple reservations to localStorage', () => {
+  test('should add multiple reservations to localStorage', () => {
     const reservationData1 = {
       date: '2024-02-22',
       time: '18:00',
@@ -114,6 +113,6 @@ describe('Tests for local storage', () => {
     reserve(reservationData2);
 
     const storedReservations = JSON.parse(localStorage.getItem('reservations'));
-    expect(storedReservations).toEqual([reservationData1, reservationData2]);
+    expect([storedReservations]).toEqual([reservationData1, reservationData2]);
   });
 });
