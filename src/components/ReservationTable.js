@@ -15,7 +15,7 @@ const ReservationTable = () => {
   }, []); // Solo se ejecuta una vez al cargar el componente
 
   return (
-    <VStack p={16} alignItems="flex-start">
+    <VStack p={{ base: 4, md: 16 }} alignItems="flex-start">
         <Heading as="h1" id="reservations-section">
             Reservations
         </Heading>

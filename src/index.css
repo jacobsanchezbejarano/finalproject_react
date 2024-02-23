@@ -309,8 +309,17 @@ tbody tr:hover {
   background-color: #ddd;
 }
 
+.reservation-section {
+  flex-direction: column;
+}
+
+
 
 @media (min-width: 37.5em) {
+
+  .reservation-section {
+    flex-direction: row;
+  }
 
   .specials-card > h3 {
     position: absolute;
@@ -383,7 +392,6 @@ tbody tr:hover {
     top: 20px;
     z-index: 1;
     max-width: 270px;
-    height: 120%;
     overflow: hidden;
     border-radius: 18px;
     margin-right: 15px;

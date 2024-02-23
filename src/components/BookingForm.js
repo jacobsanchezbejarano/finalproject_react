@@ -56,7 +56,7 @@ export default function BookingForm(props) {
       }, [isLoading, response]);
     
       return (
-        <VStack p={16} alignItems="flex-start">
+        <VStack p={{ base: 4, md: 16 }} alignItems="flex-start">
         <Heading as="h1" id="contactme-section">
           Reserve a Table
         </Heading>
@@ -158,7 +158,7 @@ export default function BookingForm(props) {
                         height={250}
                         />
                     </FormControl>
-                    <Button type="submit" className="btn btn-primary" width="full">
+                    <Button type="submit" className="btn btn-primary" aria-label="On Click" width="full">
                         Make Your reservation
                     </Button>
                 </form>

@@ -1,5 +1,5 @@
 export default function Button(props) {
     return (
-        <button className={"btn "+ props.classProp}>{props.name}</button>
+        <button className={"btn "+ props.classProp} aria-label="On Click">{props.name}</button>
     )
 }

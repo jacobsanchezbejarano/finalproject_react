@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import Nav from "./Nav";
 
 export default function Header() {
@@ -16,9 +17,11 @@ export default function Header() {
 
     return (
         <header>
-            <div className="first"> {/* Cambio "class" por "className" */}
-                <img src={image} alt={alt_val}/>
-            </div>
+            <Link exact="true" to="/">
+                <div className="first">
+                    <img src={image} alt={alt_val}/>
+                </div>
+            </Link>
             <div>
                 <button id="hamburguerBtn" onClick={toggleMenu}>
                     <span>{menuAbierto ? 'X' : '\u2630'}</span>

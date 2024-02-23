@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from "./Button"
 import Card from "./Card"
 export default function Specials() {
@@ -30,7 +31,7 @@ export default function Specials() {
         <section className="specials-section">
             <div className="specials-title">
                 <h2>This weeks specials</h2>
-                <Button classProp="btn-primary" name="Online Menu"/>
+                <Link to="/menu"><Button classProp="btn-primary" name="Online Menu"/></Link>
             </div>
             <div className="specials-cards">
                 {data.map((item) => <Card key={item.id} {...item} />)}

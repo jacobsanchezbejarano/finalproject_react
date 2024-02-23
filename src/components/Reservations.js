@@ -8,7 +8,7 @@ export default function Reservations(props) {
         <FullScreenSection
             justifyContent="center"
             alignItems="center">
-                <Flex>
+                <Flex className="reservation-section">
                     <BookingForm availableTimes={props.availableTimes} updateTimes={props.updateTimes}/>
                     <ReservationTable/>
                 </Flex>
