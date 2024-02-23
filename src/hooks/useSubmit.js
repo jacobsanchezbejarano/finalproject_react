@@ -10,13 +10,17 @@ const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const submit = async (url, data) => {
+  const submit = async (url, data, operation_type) => {
     const random = Math.random();
     setLoading(true);
     try {
-      await wait(2000);
-      if (random < 0.5) {
-        throw new Error("Something went wrong");
+      if(operation_type === 'reservation') {
+        await reserve(data);
+      }else{
+        await wait(2000);
+        if (random < 0.5) {
+          throw new Error("Something went wrong");
+        }
       }
       setResponse({
         type: 'success',
@@ -36,3 +40,16 @@ const useSubmit = () => {
 }
 
 export default useSubmit;
+
+const reserve = (reservationData) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+      reservations.push(reservationData);
+      localStorage.setItem('reservations', JSON.stringify(reservations));
+      resolve(true);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}

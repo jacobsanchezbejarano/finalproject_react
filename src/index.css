@@ -18,7 +18,7 @@ code {
   border:none;
 }
 
-body {
+#root {
   max-width: 1200px;
   margin: auto!important;
 }
@@ -276,6 +276,38 @@ article > p {
   color: #F4CE14;
 }
 
+/* Reservations container*/
+
+.reservations-container {
+  display: flex;
+}
+
+
+/* Table styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
 
 
 @media (min-width: 37.5em) {

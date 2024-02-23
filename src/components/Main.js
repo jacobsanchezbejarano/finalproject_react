@@ -6,6 +6,9 @@ import Order from "./Order";
 import Login from "./Login";
 import {Routes, Route} from 'react-router-dom';
 import { useReducer } from "react";
+import {
+    VStack,
+  } from "@chakra-ui/react";
 
 // Definir el reducer
 const reducer = (state, action) => {
@@ -27,7 +30,11 @@ const reducer = (state, action) => {
                 { id: 5, time: "21:00" },
                 { id: 6, time: "22:00" }];
         default:
-            return [];
+            return [
+                { id: 1, time: "17:00" },
+                { id: 2, time: "18:00" },
+                { id: 3, time: "19:00" },
+                { id: 6, time: "22:00" }];
     }
   };
   

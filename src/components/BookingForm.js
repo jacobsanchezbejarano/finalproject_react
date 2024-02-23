@@ -37,7 +37,8 @@ export default function BookingForm(props) {
             occasion: Yup.string().required('Occasion is required'),
         }),
         onSubmit: (values) => {
-            submit(url,values);
+            const operation_type = 'reservation';
+            submit(url,values,operation_type);
         },
       });
 
@@ -55,11 +56,11 @@ export default function BookingForm(props) {
       }, [isLoading, response]);
     
       return (
-        <VStack w="1024px" p={32} alignItems="flex-start">
+        <VStack p={16} alignItems="flex-start">
         <Heading as="h1" id="contactme-section">
           Reserve a Table
         </Heading>
-        <Box p={6} rounded="md" w="100%">
+        <Box p={4} rounded="md" w="100%">
                 <form
                 style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
                 onSubmit={formik.handleSubmit}

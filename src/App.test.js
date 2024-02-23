@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Home from './components/Home';
 import Card from "./components/Card";
-import { reducer } from './reducerFunctions';
+import { reducer, reserve } from './utils';
 
 
 test('Renders the home screen', () => {
@@ -69,4 +69,51 @@ test("Returns an empty array for an unknown date", () => {
 
   // Assert
   expect(newState).toEqual([]);
+});
+
+describe('Tests for local storage', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it('should save a reservation to localStorage', () => {
+    const reservationData = {
+      date: '2024-02-22',
+      time: '18:00',
+      guests: '5',
+      occasion: 'Birthday',
+      comment: 'Special instructions',
+    };
+
+    reserve(reservationData);
+
+    expect(localStorage.getItem('reservations')).not.toBeNull();
+
+    const storedReservations = JSON.parse(localStorage.getItem('reservations'));
+    expect(storedReservations).toEqual([reservationData]);
+  });
+
+  it('should add multiple reservations to localStorage', () => {
+    const reservationData1 = {
+      date: '2024-02-22',
+      time: '18:00',
+      guests: '5',
+      occasion: 'Birthday',
+      comment: 'Special instructions',
+    };
+
+    const reservationData2 = {
+      date: '2024-02-23',
+      time: '19:00',
+      guests: '2',
+      occasion: 'Anniversary',
+      comment: 'No special instructions',
+    };
+
+    reserve(reservationData1);
+    reserve(reservationData2);
+
+    const storedReservations = JSON.parse(localStorage.getItem('reservations'));
+    expect(storedReservations).toEqual([reservationData1, reservationData2]);
+  });
 });

@@ -20,3 +20,17 @@ export const reducer = (state, action) => {
             return [];
     }
   };
+
+export const reserve = (reservationData) => {
+    return new Promise((resolve, reject) => {
+      try {
+        const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+        reservations.push(reservationData);
+        localStorage.setItem('reservations', JSON.stringify(reservations));
+        resolve(true);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+  
