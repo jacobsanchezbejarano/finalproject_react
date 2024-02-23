@@ -313,7 +313,10 @@ tbody tr:hover {
   flex-direction: column;
 }
 
-
+footer {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 
 @media (min-width: 37.5em) {
 
