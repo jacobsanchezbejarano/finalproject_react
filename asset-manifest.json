@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/finalproject_react/static/css/main.ea8fe2e3.css",
+    "main.js": "/finalproject_react/static/js/main.85793d25.js",
+    "static/js/453.fb67ec70.chunk.js": "/finalproject_react/static/js/453.fb67ec70.chunk.js",
+    "static/media/greek_salad.jpg": "/finalproject_react/static/media/greek_salad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/finalproject_react/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/bruchetta.png": "/finalproject_react/static/media/bruchetta.adebbc9b7d7f63a59f7b.png",
+    "static/media/Logo.svg": "/finalproject_react/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "index.html": "/finalproject_react/index.html",
+    "main.ea8fe2e3.css.map": "/finalproject_react/static/css/main.ea8fe2e3.css.map",
+    "main.85793d25.js.map": "/finalproject_react/static/js/main.85793d25.js.map",
+    "453.fb67ec70.chunk.js.map": "/finalproject_react/static/js/453.fb67ec70.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea8fe2e3.css",
+    "static/js/main.85793d25.js"
+  ]
+}
